@@ -1,0 +1,83 @@
+[ 2016-09-01T22:53:46+08:00 ] ::1 /0phptest/index.php/MySqldoc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-01T22:53:56+08:00 ] ::1 /0phptest/index.php/MySqldoc/showtable
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: select 
+			    	column_name AS `列名`,    
+					data_type   AS `数据类型`,  
+					character_maximum_length  AS `字符长度`,  
+					numeric_precision AS `数字长度`,  
+					numeric_scale AS `小数位数`,  
+					is_nullable AS `是否允许非空`,  
+					column_default  AS  `默认值`,  
+					column_comment  AS  `备注`   
+    			from Information_schema.columns 
+	    			where TABLE_SCHEMA='autopartsshop' and   
+					table_Name='tp_users' 
+					order by ORDINAL_POSITION asc [ RunTime:0.0150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-01T22:54:07+08:00 ] ::1 /0phptest/index.php/MySqldoc/querytablename
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'tpshop20160831'  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-01T22:54:31+08:00 ] ::1 /0phptest/index.php/MySqldoc/showtbname
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'tpshop20160831'  [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-09-01T22:56:36+08:00 ] ::1 /0phptest/index.php/MySqldoc/showtable
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: select 
+			    	column_name AS `列名`,    
+					data_type   AS `数据类型`,  
+					character_maximum_length  AS `字符长度`,  
+					numeric_precision AS `数字长度`,  
+					numeric_scale AS `小数位数`,  
+					is_nullable AS `是否允许非空`,  
+					column_default  AS  `默认值`,  
+					column_comment  AS  `备注`   
+    			from Information_schema.columns 
+	    			where TABLE_SCHEMA='tpshop20160831' and   
+					table_Name='tp_users' 
+					order by ORDINAL_POSITION asc [ RunTime:0.0150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
