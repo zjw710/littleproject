@@ -18,7 +18,7 @@ class MySqldocController extends Controller {
     	// dump($data);
     	
     	header("Content-Type:text/html;charset=utf-8");
-    	$tbname = 'tp_users';
+    	$tbname = I('tbname','tp_users');
     	$db = M();
     	$sql = "select 
 			    	column_name AS `列名`,    
@@ -63,9 +63,8 @@ class MySqldocController extends Controller {
     {
     	$db = M();
     	$sql = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '".C("DB_NAME")."' ";//TABLE_COMMENT 表备注名，未添加
-    	//dump($sql);
     	$data = $db->query($sql);
-    	//dump($data);
+    	
     	foreach ($data as $key => $value) {
     		$tablename[$key] = $value["table_name"] ;
     	}    	
@@ -77,10 +76,20 @@ class MySqldocController extends Controller {
     	dump($this->querytablename());
     }
     //查询某张表所有字段及类型
-	public function showOnetbcolumn($tbname='tp_users')
+	public function showOnetbcolumn($tbname='')	
     {
+    	if (empty($tbname)) {
+    		$tbname = I('tbname','tp_users');
+    	}    	
     	header("Content-Type:text/html;charset=utf-8");
     	$db = M();
+    	$tb_info_sql = "SELECT table_comment as 'desc' FROM
+    				information_schema. TABLES
+    				WHERE table_schema = '".C("DB_NAME")."' and
+					table_name = '".$tbname."'";
+		$tb_info = $db->query($tb_info_sql);
+		// dump($tb_info);
+		$tb_desc = $tb_info[0]['desc'];
     	$sql = "select 
 			    	column_name AS `列名`,    
 					data_type   AS `数据类型`,  
@@ -95,7 +104,7 @@ class MySqldocController extends Controller {
 					table_Name='".$tbname."' 
 					order by ORDINAL_POSITION asc";
 		$data = $db->query($sql);
-		echo "## 表名：".$tbname."<br><br>";
+		echo "## 表名：".$tbname." ".$tb_desc."<br><br>";
 		echo "|编号|列名|备注|类型|长度|空|默认值|";  
 		echo "<br>";
 		echo "|:----    |:----    |:-------    |:--- |-- -|------      |";  
@@ -116,7 +125,7 @@ class MySqldocController extends Controller {
     //查询显示所有的表，按showdoc格式
     public function showAlltbcolumn($value='')
     {
-    	$tablename = $this->querytablename();
+    	$tablename = $this->querytablename();    	
     	// dump($tablename);exit;
     	foreach ($tablename as $key => $value) {
     		//dump($value);

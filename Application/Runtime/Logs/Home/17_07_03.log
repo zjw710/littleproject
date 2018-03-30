@@ -1,0 +1,173 @@
+[ 2017-07-03T17:07:10+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-03T17:07:29+08:00 ] 127.0.0.1 /index.php/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-03T17:08:11+08:00 ] 127.0.0.1 /index.php/index/MySqldoc/showtable?tbname=tp_users
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:MySqldoc
+
+[ 2017-07-03T17:08:39+08:00 ] 127.0.0.1 /index.php/MySqldoc/showtable?tbname=tp_users
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [1049] Unknown database 'tpshop20160831'
+
+[ 2017-07-03T17:09:12+08:00 ] 127.0.0.1 /index.php/MySqldoc/showtable?tbname=tp_users
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-03T17:09:20+08:00 ] 127.0.0.1 /index.php/MySqldoc/showtable?tbname=tp_users
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'admin'@'localhost' (using password: YES)
+
+[ 2017-07-03T17:09:39+08:00 ] 127.0.0.1 /index.php/MySqldoc/showtable?tbname=tp_users
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: select 
+			    	column_name AS `列名`,    
+					data_type   AS `数据类型`,  
+					character_maximum_length  AS `字符长度`,  
+					numeric_precision AS `数字长度`,  
+					numeric_scale AS `小数位数`,  
+					is_nullable AS `是否允许非空`,  
+					column_default  AS  `默认值`,  
+					column_comment  AS  `备注`   
+    			from Information_schema.columns 
+	    			where TABLE_SCHEMA='tianzilong' and   
+					table_Name='tp_users' 
+					order by ORDINAL_POSITION asc [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-03T17:10:06+08:00 ] 127.0.0.1 /index.php/MySqldoc/showtable?tbname=cmf_users
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: select 
+			    	column_name AS `列名`,    
+					data_type   AS `数据类型`,  
+					character_maximum_length  AS `字符长度`,  
+					numeric_precision AS `数字长度`,  
+					numeric_scale AS `小数位数`,  
+					is_nullable AS `是否允许非空`,  
+					column_default  AS  `默认值`,  
+					column_comment  AS  `备注`   
+    			from Information_schema.columns 
+	    			where TABLE_SCHEMA='tianzilong' and   
+					table_Name='cmf_users' 
+					order by ORDINAL_POSITION asc [ RunTime:0.0050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-03T17:11:17+08:00 ] 127.0.0.1 /index.php/MySqldoc/showOnetbcolumn?tbname=cmf_users
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-03T17:11:28+08:00 ] 127.0.0.1 /index.php/MySqldoc/showOnetbcolumn?tbname=cmf_users
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: select 
+			    	column_name AS `列名`,    
+					data_type   AS `数据类型`,  
+					character_maximum_length  AS `字符长度`,  
+					numeric_precision AS `数字长度`,  
+					numeric_scale AS `小数位数`,  
+					is_nullable AS `是否允许非空`,  
+					column_default  AS  `默认值`,  
+					column_comment  AS  `备注`   
+    			from Information_schema.columns 
+	    			where TABLE_SCHEMA='tianzilong' and   
+					table_Name='cmf_users' 
+					order by ORDINAL_POSITION asc [ RunTime:0.0050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-03T18:40:21+08:00 ] 127.0.0.1 /index.php/MySqldoc/showOnetbcolumn?tbname=cmf_employee
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: select 
+			    	column_name AS `列名`,    
+					data_type   AS `数据类型`,  
+					character_maximum_length  AS `字符长度`,  
+					numeric_precision AS `数字长度`,  
+					numeric_scale AS `小数位数`,  
+					is_nullable AS `是否允许非空`,  
+					column_default  AS  `默认值`,  
+					column_comment  AS  `备注`   
+    			from Information_schema.columns 
+	    			where TABLE_SCHEMA='tianzilong' and   
+					table_Name='cmf_employee' 
+					order by ORDINAL_POSITION asc [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
